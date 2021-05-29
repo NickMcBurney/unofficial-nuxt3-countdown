@@ -56,7 +56,6 @@
 
 <script>
 import dayjs from 'dayjs'
-const Announced = '2021-02-26'
 const BetaDate = '2021-06-30'
 const StableDate = '2021-12-31'
 
