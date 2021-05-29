@@ -4,11 +4,21 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt3-countdown',
+    title: 'Unofficial Nuxt 3 Release Count Down',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Unofficial Nuxt 3 Release Count Down'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '/nuxt3-countdown.png'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },

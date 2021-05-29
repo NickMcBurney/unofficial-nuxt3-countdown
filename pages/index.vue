@@ -1,6 +1,6 @@
 <template>
-  <div class="container p-4 w-full">
-    <div class="w-full">
+  <div class="container p-4">
+    <div class="w-full  max-w-screen-lg">
       <Logo />
       <h1 class="text-4xl font-bold mb-3 md:mb-4 mt-8">
         <span class="text-base uppercase block">[Unofficial]</span>
