@@ -3,6 +3,7 @@
     <div class="w-full">
       <Logo />
       <h1 class="text-4xl font-bold mb-3 md:mb-4 mt-8">
+        <span class="text-base uppercase block">[Unofficial]</span>
         Nuxt 3 Release Date Countdown
       </h1>
 
@@ -11,9 +12,9 @@
         <span class="text-3xl font-bold block text-nuxt-lightgreen">{{ betaDaysRemaining }} {{ betaDaysRemaining === 1 ? 'Day' : 'Days' }}</span>
       </p>
 
-      <div class="temperature px-3 bg-gradient-to-r from-red-500 via-yellow-400 to-green-500 grid grid-cols-2 h-12 md:h-14 rounded-4xl overflow-hidden">
-        <div class="flex items-center justify-start leading-4 text-white font-bold text-sm md:text-base">Dates Announced</div>
-        <div class="flex items-center justify-end leading-4 text-white font-bold text-sm md:text-base">End of Q2 2021</div>
+      <div class="temperature px-3 md:px-6 bg-gradient-to-r from-red-500 via-yellow-400 to-green-500 grid grid-cols-2 h-12 md:h-14 rounded-4xl overflow-hidden">
+        <div class="flex items-center justify-start leading-4 text-white font-bold text-sm md:text-base">Low Chance<br/>of Release</div>
+        <div class="flex items-center justify-end leading-4 text-white font-bold text-sm md:text-base">High Chance<br/>of Release</div>
       </div>
       <div style="--count: 124;" class="temperature-gauge grid h-12 md:h-14 -mt-12 md:-mt-14">
         <div :style="`--start: ${124 - betaDaysRemaining};`">
@@ -30,9 +31,9 @@
         <span class="text-3xl font-bold block text-nuxt-lightgreen">{{ stableDaysRemaining }} {{ stableDaysRemaining === 1 ? 'Day' : 'Days' }}</span>
       </p>
 
-      <div class="temperature px-3 bg-gradient-to-r from-red-500 via-yellow-400 to-green-500 grid grid-cols-2 h-12 md:h-14 rounded-4xl overflow-hidden">
-        <div class="flex items-center justify-start leading-4 text-white font-bold text-sm md:text-base">Dates Announced</div>
-        <div class="flex items-center justify-end leading-4 text-white font-bold text-sm md:text-base">End of 2021</div>
+      <div class="temperature px-3 md:px-6 bg-gradient-to-r from-red-500 via-yellow-400 to-green-500 grid grid-cols-2 h-12 md:h-14 rounded-4xl overflow-hidden">
+        <div class="flex items-center justify-start leading-4 text-white font-bold text-sm md:text-base">Low Chance<br/>of Release</div>
+        <div class="flex items-center justify-end leading-4 text-white font-bold text-sm md:text-base">High Chance<br/>of Release</div>
       </div>
       <div style="--count: 308;" class="temperature-gauge grid h-12 md:h-14 -mt-12 md:-mt-14">
         <div :style="`--start: ${308 - stableDaysRemaining};`">
