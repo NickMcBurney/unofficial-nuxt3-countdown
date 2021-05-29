@@ -8,16 +8,45 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'An unofficial countdown for Nuxt 3 release - built with Nuxt 2' },
       {
         hid: 'og:title',
         property: 'og:title',
         content: 'Unofficial Nuxt 3 Release Count Down'
       },
       {
+        hid: "og:description",
+        name: "og:description",
+        content: "An unofficial countdown for Nuxt 3 release - built with Nuxt 2",
+      },
+      {
         hid: 'og:image',
         property: 'og:image',
-        content: '/nuxt3-countdown.png'
+        content: 'https://unofficial-nuxt3-countdown.netlify.app/nuxt3-countdown.png'
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image"
+      },
+      {
+        hid: "twitter:url",
+        name: "twitter:url",
+        content: "https://unofficial-nuxt3-countdown.netlify.app/",
+      },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "Nuxt 3 Release Count Down",
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content: "An unofficial countdown for Nuxt 3 release - built with Nuxt 2",
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: "https://unofficial-nuxt3-countdown.netlify.app/nuxt3-countdown.png",
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
