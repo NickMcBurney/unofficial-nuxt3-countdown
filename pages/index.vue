@@ -9,7 +9,17 @@
 
       <p class="mb-3 text-xl">
         Nuxt 3 Public Beta could be released within the next:
-        <span class="text-3xl font-bold block text-nuxt-lightgreen">{{ betaDaysRemaining }} {{ betaDaysRemaining === 1 ? 'Day' : 'Days' }}</span>
+        <span class="text-3xl font-bold block text-nuxt-lightgreen">
+          <template v-if="betaDaysRemaining > 0">
+            {{ betaDaysRemaining }} {{ betaDaysRemaining === 1 ? 'Day' : 'Days' }}
+          </template>
+          <template v-else>
+            Any day now*
+          </template>
+        </span>
+      </p>
+      <p v-if="betaDaysRemaining < 1" class="-mt-3 mb-3 text-sm font-bold">
+        *Nuxt 3 Public Beta was due to release {{ betaDaysRemaining * -1 }} days ago
       </p>
 
       <div class="temperature px-3 md:px-6 bg-gradient-to-r from-red-500 via-yellow-400 to-green-500 grid grid-cols-2 h-12 md:h-14 rounded-4xl overflow-hidden">
@@ -17,13 +27,16 @@
         <div class="flex items-center justify-end leading-4 text-white font-bold text-sm md:text-base">High Chance<br/>of Release</div>
       </div>
       <div style="--count: 124;" class="temperature-gauge grid h-12 md:h-14 -mt-12 md:-mt-14">
-        <div :style="`--start: ${124 - betaDaysRemaining};`">
+        <div :style="`--start: ${126 - (betaDaysRemaining < 0 ? 2 : betaDaysRemaining)};`">
           <div class="w-0.5 sm:w-1" />
         </div>
       </div>
 
       <p class="mt-3 text-sm">
         Nuxt 3 Beta is estimated to be released sometime in Q2 2021
+        <span v-if="betaDaysRemaining < 1" class="text-sm font-bold block">
+          *Nuxt 3 Public Beta was expected to release {{ betaDaysRemaining * -1 }} days ago
+        </span>
       </p>
 
       <p class="mb-3 text-xl mt-10">
@@ -49,6 +62,10 @@
         Release dates are based on slides by <a href="https://twitter.com/Atinux" rel="nofollow noreferrer" taget="_blank" class="text-nuxt-lightgreen underline">Sébastien Chopin</a> and <a href="https://twitter.com/_pi0_" rel="nofollow noreferrer" taget="_blank" class="text-nuxt-lightgreen underline">Pooya Parsa</a> from February 2021 and could be subject to change:
         <a href="https://nuxt.slides.com/atinux/nuxt-3-in-action" rel="nofollow noreferrer" taget="_blank" class="ml-2 text-nuxt-lightgreen underline">Nuxt 3 in Action Slideshow</a>
         <a href="https://docs.google.com/presentation/d/1cWxCe9IZVRzM2W4OqvA4PtBr9_GLcF3n7VJEUoBLjg8/" rel="nofollow noreferrer" taget="_blank" class="ml-2 text-nuxt-lightgreen underline">State of Nuxt {2,3}</a>
+      </p>
+
+      <p class="mt-6 text-sm">
+        This unofficial Nuxt 3 release date countdown was built by <a href="https://www.nickmcburney.co.uk" target="_blank" class="text-nuxt-lightgreen underline">Nick McBurney</a>
       </p>
     </div>
   </div>
