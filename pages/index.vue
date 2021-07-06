@@ -18,9 +18,6 @@
           </template>
         </span>
       </p>
-      <p v-if="betaDaysRemaining < 1" class="-mt-3 mb-3 text-sm font-bold">
-        *Nuxt 3 Public Beta was due to release {{ betaDaysRemaining * -1 }} days ago
-      </p>
 
       <div class="temperature px-3 md:px-6 bg-gradient-to-r from-red-500 via-yellow-400 to-green-500 grid grid-cols-2 h-12 md:h-14 rounded-4xl overflow-hidden">
         <div class="flex items-center justify-start leading-4 text-white font-bold text-sm md:text-base">Low Chance<br/>of Release</div>
