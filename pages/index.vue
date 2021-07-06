@@ -8,7 +8,7 @@
       </h1>
 
       <p class="mb-3 text-xl">
-        Nuxt 3 Public Beta could be released within the next:
+        Nuxt 3 Public Beta could be released <template v-if="betaDaysRemaining > 0">within the next:</template>
         <span class="text-3xl font-bold block text-nuxt-lightgreen">
           <template v-if="betaDaysRemaining > 0">
             {{ betaDaysRemaining }} {{ betaDaysRemaining === 1 ? 'Day' : 'Days' }}
